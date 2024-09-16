@@ -10,11 +10,13 @@ services:
       - db
 
   pgadmin:
-    image: dpage/pgadmin4:latest
+    image: dpage/pgadmin4:latest 
+    # --- takes the latest picture of 
     restart: always
     environment:
       PGADMIN_DEFAULT_EMAIL: pgadmin@gmail.com
       PGADMIN_DEFAULT_PASSWORD: geheim    
+      # --- passwort ist immer geheim
       PGADMIN_CONFIG_WTF_CSRF_HEADERS: '["Referer", "Origin"]'
       PGADMIN_CONFIG_WTF_CSRF_ENABLED: 'False'
     volumes:
